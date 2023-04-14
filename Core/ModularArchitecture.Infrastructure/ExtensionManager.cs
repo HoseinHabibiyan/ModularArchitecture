@@ -1,8 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
 namespace ModularArchitecture.Infrastructure
@@ -132,7 +129,7 @@ namespace ModularArchitecture.Infrastructure
         private static IEnumerable<Assembly> GetAssemblies(Func<Assembly, bool> predicate)
         {
             if (predicate == null)
-                return Assemblies;
+                return new Assembly[] { };
 
             return Assemblies.Where(predicate);
         }

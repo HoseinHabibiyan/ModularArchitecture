@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace ModularArchitecture.Infrastructure { 
-
+namespace ModularArchitecture.Infrastructure
+{ 
   public interface IConfigureServicesAction
   {
     int Priority { get; }

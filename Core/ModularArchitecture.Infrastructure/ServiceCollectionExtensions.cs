@@ -2,9 +2,6 @@
 
 namespace ModularArchitecture.Infrastructure
 {
-    /// <summary>
-    /// Contains the extension methods of the <see cref="IServiceCollection">IServiceCollection</see> interface.
-    /// </summary>
     public static class ServiceCollectionExtensions
     {
         public static void AddAppServices(this IServiceCollection services)

@@ -18,6 +18,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAppMiddlewares();
+
 app.UseHttpsRedirection();
 
 app.Run();

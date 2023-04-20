@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using  ModularArchitecture.Identity.Core;
+using ModularArchitecture.Identity.EntityFramework;
 
-namespace ModularArchitecture.Identity.Core.Controllers
+namespace Security.Controllers
 {
     [ApiController]
     [Route("api/refreshtoken")]

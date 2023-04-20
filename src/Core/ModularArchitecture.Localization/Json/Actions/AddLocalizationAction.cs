@@ -1,8 +1,9 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 using ModularArchitecture.Infrastructure;
+using ModularArchitecture.Localization.Json;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Actions
 {
     public class AddLocalizationAction : IConfigureServicesAction
     {

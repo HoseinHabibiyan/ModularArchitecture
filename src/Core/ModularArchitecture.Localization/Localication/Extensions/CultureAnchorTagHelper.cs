@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Localication.Extensions
 {
     [HtmlTargetElement("a", Attributes = ActionAttributeName)]
     [HtmlTargetElement("a", Attributes = ControllerAttributeName)]
@@ -22,7 +22,7 @@ namespace ModularArchitecture.Localization
         public CultureAnchorTagHelper(IHttpContextAccessor contextAccessor, IHtmlGenerator generator) :
             base(generator)
         {
-            this._contextAccessor = contextAccessor;
+            _contextAccessor = contextAccessor;
         }
 
         private const string ActionAttributeName = "asp-action";

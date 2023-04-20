@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Models
 {
     public class RefreshToken
     {

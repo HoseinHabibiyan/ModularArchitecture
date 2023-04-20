@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using ModularArchitecture.Infrastructure;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.TwoFactorRegistration
 {
     public class AddTwoFactorRegistrationAction : IConfigureServicesAction
     {

@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Caching
 {
     public class ResourceNamesCache : IResourceNamesCache
     {

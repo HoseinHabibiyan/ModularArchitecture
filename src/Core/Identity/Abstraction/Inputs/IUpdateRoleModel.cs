@@ -1,6 +1,6 @@
-﻿using   ModularArchitecture.Identity.Core;
+﻿using ModularArchitecture.Identity.Abstraction.Results;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Abstraction.Inputs
 {
     public interface IUpdateRoleModel : IRole
     {

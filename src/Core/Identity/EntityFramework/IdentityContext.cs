@@ -2,8 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ModularArchitecture.Identity.Core.Models;
+using ModularArchitecture.Identity.EntityFramework.Extensions;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.EntityFramework
 {
     public class IdentityContext : IdentityDbContext<ApplicationUser>, IIdentityContext
     {
@@ -27,8 +29,8 @@ namespace  ModularArchitecture.Identity.Core
 
             builder.Entity<ApplicationRole>().HasOne<Application>().WithMany().HasForeignKey(x => x.ApplicationId);
             builder.Entity<ApplicationRole>().HasData(
-                new ApplicationRole {Id = "1", Name = "SuperAdmin", NormalizedName = "SUPERADMIN"},
-                new ApplicationRole {Id = "2", Name = "Admin", NormalizedName = "ADMIN"});
+                new ApplicationRole { Id = "1", Name = "SuperAdmin", NormalizedName = "SUPERADMIN" },
+                new ApplicationRole { Id = "2", Name = "Admin", NormalizedName = "ADMIN" });
 
             builder.Entity<RefreshToken>().ToTable("RefreshTokens");
             builder.Entity<Application>().ToTable("Applications");

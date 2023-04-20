@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using ModularArchitecture.Identity;
+using ModularArchitecture.Identity.Core.Models;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.EntityFramework
 {
     public class ClientStore
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Extensions
 {
     public static class HttpContextAccessorExtensions
     {
@@ -47,30 +47,30 @@ namespace ModularArchitecture.Identity.Core
 
         public static bool IsSuperAdmin(this IHttpContextAccessor httpContextAccessor)
         {
-            var roles = GetRoles(httpContextAccessor);
+            var roles = httpContextAccessor.GetRoles();
             return roles.Contains("SuperAdmin");
         }
 
         public static bool IsAdmin(this IHttpContextAccessor httpContextAccessor)
         {
-            var roles = GetRoles(httpContextAccessor);
+            var roles = httpContextAccessor.GetRoles();
             return roles.Contains("Admin");
         }
 
         public static bool IsOperator(this IHttpContextAccessor httpContextAccessor)
         {
-            var roles = GetRoles(httpContextAccessor);
+            var roles = httpContextAccessor.GetRoles();
             return roles.Contains("Operator");
         }
 
         public static bool IsAdminOrSuperAdmin(this IHttpContextAccessor httpContextAccessor)
         {
-            return IsSuperAdmin(httpContextAccessor) || IsAdmin(httpContextAccessor);
+            return httpContextAccessor.IsSuperAdmin() || httpContextAccessor.IsAdmin();
         }
 
         public static bool IsAdminOrSuperAdminOrOperator(this IHttpContextAccessor httpContextAccessor)
         {
-            return IsSuperAdmin(httpContextAccessor) || IsAdmin(httpContextAccessor) || IsOperator(httpContextAccessor);
+            return httpContextAccessor.IsSuperAdmin() || httpContextAccessor.IsAdmin() || httpContextAccessor.IsOperator();
         }
     }
 }

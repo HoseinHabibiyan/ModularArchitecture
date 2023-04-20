@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using ModularArchitecture.Identity.TwoFactorRegistration;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.TwoFactorRegistration.Extensions
 {
     public static class AddTwoFactorRegistrationExtension
     {

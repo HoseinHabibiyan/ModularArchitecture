@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ModularArchitecture.Identity.EntityFramework;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.TwoFactorRegistration
 {
     public class EntityRegistrar : IIdentityEntityRegistrar
     {

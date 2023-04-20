@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 
-namespace   ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Models
 {
     public class ApplicationRole : IdentityRole
     {

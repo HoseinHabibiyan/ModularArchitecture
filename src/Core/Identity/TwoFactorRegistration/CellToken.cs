@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.TwoFactorRegistration
 {
     public class CellToken
     {

@@ -1,8 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
-using ModularArchitecture.Identity.Core.Result;
+using ModularArchitecture.Identity.Abstraction.Inputs;
+using ModularArchitecture.Identity.Abstraction.Results;
+using ModularArchitecture.Identity.Core.Results;
+using ModularArchitecture.Identity.EntityFramework;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.TwoFactorRegistration
 {
     public interface ITwoFactorRegistrationService
     {

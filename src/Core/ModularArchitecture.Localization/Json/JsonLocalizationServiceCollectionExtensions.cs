@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Localization;
+using ModularArchitecture.Localization.Json.Internal;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json
 {
     public static class JsonLocalizationServiceCollectionExtensions
     {
@@ -35,7 +36,7 @@ namespace ModularArchitecture.Localization
             {
                 throw new ArgumentNullException(nameof(setupAction));
             }
-            
+
             AddJsonLocalizationServices(services, setupAction);
 
             return services;

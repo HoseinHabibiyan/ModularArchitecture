@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
+using ModularArchitecture.Identity.Abstraction.Results;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Results
 {
     public class Role : IdentityRole, IRole
     {

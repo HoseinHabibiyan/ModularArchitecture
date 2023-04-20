@@ -1,13 +1,17 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using ModularArchitecture.Identity.Core.Result;
+using ModularArchitecture.Identity.Abstraction;
+using ModularArchitecture.Identity.Abstraction.Inputs;
+using ModularArchitecture.Identity.Abstraction.Results;
+using ModularArchitecture.Identity.Core.Extensions;
+using ModularArchitecture.Identity.Core.Results;
 using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Api
 {
     public class AccountService : IAccountService
     {
@@ -77,7 +81,7 @@ namespace ModularArchitecture.Identity.Core
             {
                 var r = JsonConvert.DeserializeObject<dynamic>(data);
                 var token = new AuthToken { RefreshToken = r.refresh_token, AccessToken = r.access_token };
-                return new RefreshTokenResult (token);
+                return new RefreshTokenResult(token);
             }
 
             if (response.StatusCode == HttpStatusCode.NotFound)

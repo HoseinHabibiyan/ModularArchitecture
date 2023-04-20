@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using ModularArchitecture.Localization.Json.Caching;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Resources;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Internal
 {
     public class JsonStringProvider : IResourceStringProvider
     {

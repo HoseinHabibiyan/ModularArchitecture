@@ -1,5 +1,6 @@
-﻿
-namespace  ModularArchitecture.Identity.Core
+﻿using ModularArchitecture.Identity.Abstraction.Inputs;
+
+namespace ModularArchitecture.Identity.Core.Inputs
 {
     public class ConfirmEmailSetPasswordAddToRolesModel : IConfirmEmailSetPasswordAddToRolesModel
     {

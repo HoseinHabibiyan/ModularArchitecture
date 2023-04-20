@@ -1,4 +1,6 @@
 ﻿
+using ModularArchitecture.Identity.Abstraction;
+
 namespace ModularArchitecture.Identity.Core
 {
     public class UserSession : IUserSession

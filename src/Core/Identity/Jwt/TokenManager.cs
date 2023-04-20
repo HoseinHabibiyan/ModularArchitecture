@@ -3,8 +3,9 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using ModularArchitecture.Identity.Core.Models;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Jwt
 {
     public class TokenManager
     {

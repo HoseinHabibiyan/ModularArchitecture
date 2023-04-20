@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Abstraction.Results
 {
     public interface IGetUsersResult : IIdentityResult
     {

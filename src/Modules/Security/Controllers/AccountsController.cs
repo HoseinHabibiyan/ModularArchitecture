@@ -1,12 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Configuration;
 using Google.Apis.Auth;
 using ModularArchitecture.Identity.Core;
-using System.Net;
+using ModularArchitecture.MemoryCache;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authorization;
+using ModularArchitecture.Identity.Core.Inputs;
+using ModularArchitecture.Identity.Core.Results;
+using ModularArchitecture.Identity.Core.Extensions;
+using ModularArchitecture.Identity.Core.Models;
 
-namespace ModularArchitecture.Identity.Controllers
+namespace Security.Controllers
 {
     [ApiController]
     [Route("api/accounts")]

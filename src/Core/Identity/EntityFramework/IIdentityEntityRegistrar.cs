@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.EntityFramework
 {
     public interface IIdentityEntityRegistrar
     {

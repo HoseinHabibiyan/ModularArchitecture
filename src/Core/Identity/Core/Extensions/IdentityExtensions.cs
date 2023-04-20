@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Extensions
 {
     public static class IdentityExtensions
     {

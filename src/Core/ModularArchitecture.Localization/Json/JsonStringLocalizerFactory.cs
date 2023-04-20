@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ModularArchitecture.Localization.Json.Caching;
+using ModularArchitecture.Localization.Json.Internal;
 
-
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json
 {
     public class JsonStringLocalizerFactory : IStringLocalizerFactory
     {
-        private readonly IResourceNamesCache _resourceNamesCache = new ResourceNamesCache();
+        private readonly Caching.IResourceNamesCache _resourceNamesCache = new Caching.ResourceNamesCache();
         private readonly ConcurrentDictionary<string, JsonStringLocalizer> _localizerCache = new ConcurrentDictionary<string, JsonStringLocalizer>();
         private readonly string _resourcesRelativePath;
         private readonly ResourcesType _resourcesType = ResourcesType.TypeBased;
@@ -50,7 +51,7 @@ namespace ModularArchitecture.Localization
             if (resourceSource.Name == "Controller")
             {
                 resourcesPath = Path.Combine(PathHelpers.GetApplicationRoot(), GetResourcePath(resourceSource.Assembly));
-                extensionResourcesPath = Path.Combine(Path.Combine(_env.ContentRootPath,"Resources"), GetResourcePath(resourceSource.Assembly));
+                extensionResourcesPath = Path.Combine(Path.Combine(_env.ContentRootPath, "Resources"), GetResourcePath(resourceSource.Assembly));
 
                 return _localizerCache.GetOrAdd(resourceSource.Name,
                     _ => CreateJsonStringLocalizer(resourcesPath, extensionResourcesPath,
@@ -60,7 +61,7 @@ namespace ModularArchitecture.Localization
             var typeInfo = resourceSource.GetTypeInfo();
             var assembly = typeInfo.Assembly;
             var assemblyName = resourceSource.Assembly.GetName().Name;
-            var typeName= typeInfo.FullName;
+            var typeName = typeInfo.FullName;
 
             try
             {

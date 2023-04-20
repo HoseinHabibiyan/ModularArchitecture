@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using Microsoft.Extensions.Localization;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json
 {
     public static class StringLocalizerExtensions
     {

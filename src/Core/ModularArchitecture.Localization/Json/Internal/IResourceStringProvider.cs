@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Internal
 {
     public interface IResourceStringProvider
     {

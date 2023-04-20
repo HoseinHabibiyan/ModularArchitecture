@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Results
 {
     public class UserRole
     {

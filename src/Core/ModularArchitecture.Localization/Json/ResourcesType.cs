@@ -1,4 +1,4 @@
-﻿namespace ModularArchitecture.Localization
+﻿namespace ModularArchitecture.Localization.Json
 {
     public enum ResourcesType
     {

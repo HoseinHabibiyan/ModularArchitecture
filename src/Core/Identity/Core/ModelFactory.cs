@@ -1,7 +1,9 @@
 ﻿
 using Microsoft.AspNetCore.Identity;
+using ModularArchitecture.Identity.Core.Models;
+using ModularArchitecture.Identity.Core.Results;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core
 {
     public class ModelFactory
     {

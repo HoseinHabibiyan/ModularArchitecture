@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ModularArchitecture.Identity.Abstraction.Inputs;
 using ModularArchitecture.Identity.Core;
+using ModularArchitecture.Identity.Core.Models;
+using ModularArchitecture.Identity.EntityFramework;
 
-namespace ModularArchitecture.Identity.Controllers
+namespace Security.Controllers
 {
     [ApiController]
     [Route("api/roles")]

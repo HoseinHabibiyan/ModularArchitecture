@@ -1,6 +1,6 @@
-﻿namespace   ModularArchitecture.Identity.Core
+﻿namespace ModularArchitecture.Identity.Abstraction.Results
 {
-    public interface IGeneratePasswordResetTokenResult:IIdentityResult
+    public interface IGeneratePasswordResetTokenResult : IIdentityResult
     {
         public string Code { get; set; }
     }

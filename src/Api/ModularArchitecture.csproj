@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Modules\Identity\Identity.csproj" />
     <ProjectReference Include="..\Core\ModularArchitecture.Infrastructure\ModularArchitecture.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\Security\Security.csproj" />
   </ItemGroup>
 
 </Project>

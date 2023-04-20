@@ -17,6 +17,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\ModularArchitecture.Infrastructure\ModularArchitecture.Infrastructure.csproj" />
+	  <ProjectReference Include="..\ModularArchitecture.MemoryCache\ModularArchitecture.MemoryCache.csproj" />
 	</ItemGroup>
 
 </Project>

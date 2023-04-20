@@ -1,4 +1,7 @@
-﻿namespace ModularArchitecture.Identity.Core
+﻿using ModularArchitecture.Identity.Abstraction.Inputs;
+using ModularArchitecture.Identity.Abstraction.Results;
+
+namespace ModularArchitecture.Identity.Abstraction
 {
     public interface IAccountService
     {

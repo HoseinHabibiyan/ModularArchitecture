@@ -6,8 +6,9 @@ using System.Text.RegularExpressions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using ModularArchitecture.Infrastructure;
+using ModularArchitecture.Localization.Localication;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Localication.Actions
 {
     public class UseRequestLocalizationAction : IConfigureMiddleware
     {

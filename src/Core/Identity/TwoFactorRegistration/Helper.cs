@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.TwoFactorRegistration
 {
     static class Helper
     {

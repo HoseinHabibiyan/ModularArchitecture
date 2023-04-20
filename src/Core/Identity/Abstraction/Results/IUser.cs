@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace  ModularArchitecture.Identity
+namespace ModularArchitecture.Identity.Abstraction.Results
 {
     public interface IUser
     {

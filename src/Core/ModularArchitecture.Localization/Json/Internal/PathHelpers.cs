@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Internal
 {
     public static class PathHelpers
     {

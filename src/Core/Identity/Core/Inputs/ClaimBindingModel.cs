@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Inputs
 {
     public class ClaimBindingModel
     {

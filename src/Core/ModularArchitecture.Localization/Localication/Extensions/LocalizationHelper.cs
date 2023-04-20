@@ -3,11 +3,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.Extensions.Localization;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Localication.Extensions
 {
     public static class LocalizationHelper
     {
-        public static List<string> GetLocalizationFromKey([NotNull]this List<LocalizedString> localizedString,[NotNull]List<string> keys)
+        public static List<string> GetLocalizationFromKey([NotNull] this List<LocalizedString> localizedString, [NotNull] List<string> keys)
         {
             var messages = new List<string>();
             foreach (var key in keys)
@@ -18,8 +18,8 @@ namespace ModularArchitecture.Localization
 
             return messages;
         }
-        
-        public static string GetLocalizationFromKey([NotNull]this List<LocalizedString> localizedString,[NotNull]string key)
+
+        public static string GetLocalizationFromKey([NotNull] this List<LocalizedString> localizedString, [NotNull] string key)
         {
             var item = localizedString.FirstOrDefault(x => x.Name.ToLower().Trim() == key.ToLower().Trim());
             return item?.Value;

@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Models
 {
     public class ApplicationUser : IdentityUser
     {
@@ -11,8 +11,8 @@ namespace  ModularArchitecture.Identity.Core
         [MaxLength(300)]
         public string FullName
         {
-            get => string.IsNullOrEmpty(_fullName) ? $"{FirstName} {MiddleName} {LastName}" : _fullName ;
-            set => _fullName = string.IsNullOrEmpty(value) ? $"{FirstName} {MiddleName} {LastName}": value;
+            get => string.IsNullOrEmpty(_fullName) ? $"{FirstName} {MiddleName} {LastName}" : _fullName;
+            set => _fullName = string.IsNullOrEmpty(value) ? $"{FirstName} {MiddleName} {LastName}" : value;
         }
 
         [MaxLength(300)]

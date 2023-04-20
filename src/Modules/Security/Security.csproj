@@ -12,8 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\src\Core\Identity\Identity.Core.csproj" />
+	  <ProjectReference Include="..\..\Core\Identity\ModularArchitecture.Identity.csproj" />
 	</ItemGroup>
-
 
 </Project>

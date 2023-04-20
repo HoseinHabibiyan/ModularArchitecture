@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Localization;
 using System.Collections.Generic;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Localication
 {
     public class LocalizationOption
     {

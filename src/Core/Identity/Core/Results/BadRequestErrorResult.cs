@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace  ModularArchitecture.Identity
+namespace ModularArchitecture.Identity.Core.Results
 {
     public class BadRequestErrorResult
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.Localization;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json
 {
     public class JsonHtmlLocalizerFactory : IHtmlLocalizerFactory
     {

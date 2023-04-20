@@ -1,6 +1,6 @@
-﻿using ModularArchitecture.Identity.Core.Result;
+﻿using ModularArchitecture.Identity.Abstraction.Results;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core.Results
 {
     public class GeneratePasswordResetTokenResult : IdentityResult, IGeneratePasswordResetTokenResult
     {

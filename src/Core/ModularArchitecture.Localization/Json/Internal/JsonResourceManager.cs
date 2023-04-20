@@ -6,7 +6,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Internal
 {
     public class JsonResourceManager
     {

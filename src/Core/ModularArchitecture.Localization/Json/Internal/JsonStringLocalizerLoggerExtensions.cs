@@ -2,7 +2,7 @@
 using System.Globalization;
 using Microsoft.Extensions.Logging;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Internal
 {
     internal static class JsonStringLocalizerLoggerExtensions
     {

@@ -3,8 +3,13 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ModularArchitecture.Identity.Abstraction;
+using ModularArchitecture.Identity.Abstraction.Inputs;
+using ModularArchitecture.Identity.Core.Models;
+using ModularArchitecture.Identity.Core.Results;
+using ModularArchitecture.Identity.EntityFramework;
 using IdentityResult = Microsoft.AspNetCore.Identity.IdentityResult;
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Core
 {
     public class UserManager : UserManager<ApplicationUser>
     {

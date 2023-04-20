@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using ModularArchitecture.Identity.EntityFramework;
 using ModularArchitecture.Infrastructure;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.EntityFramework.Extensions
 {
     /// <summary>
     /// Contains the extension methods of the <see cref="IIdentityContext">IStorageContext</see> interface.

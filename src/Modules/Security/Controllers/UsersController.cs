@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ModularArchitecture.Identity.Abstraction.Inputs;
 using ModularArchitecture.Identity.Core;
+using ModularArchitecture.Identity.Core.Extensions;
+using ModularArchitecture.Identity.Core.Inputs;
+using ModularArchitecture.Identity.Core.Models;
 using System.Security.Claims;
 
-namespace ModularArchitecture.Identity.Controllers
+namespace Security.Controllers
 {
     [ApiController]
     [Route("api/users")]

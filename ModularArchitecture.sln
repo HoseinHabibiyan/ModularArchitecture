@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularArchitecture.Infrast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularArchitecture.Localization", "src\Core\ModularArchitecture.Localization\ModularArchitecture.Localization.csproj", "{147FDA9E-D16B-4536-987B-F0DB39B72474}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Core", "src\Core\Identity\Identity.Core.csproj", "{6B341B88-233A-4BD1-8215-410EF16941A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularArchitecture.Identity", "src\Core\Identity\ModularArchitecture.Identity.csproj", "{6B341B88-233A-4BD1-8215-410EF16941A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{4E32458D-6732-46C7-9E3E-63157787AA96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Modules\Identity\Identity.csproj", "{5D111A4C-C983-4273-9D84-7CB97F91001B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularArchitecture.MemoryCache", "src\Core\ModularArchitecture.MemoryCache\ModularArchitecture.MemoryCache.csproj", "{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "src\Modules\Security\Security.csproj", "{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +43,14 @@ Global
 		{6B341B88-233A-4BD1-8215-410EF16941A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B341B88-233A-4BD1-8215-410EF16941A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B341B88-233A-4BD1-8215-410EF16941A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D111A4C-C983-4273-9D84-7CB97F91001B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D111A4C-C983-4273-9D84-7CB97F91001B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D111A4C-C983-4273-9D84-7CB97F91001B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D111A4C-C983-4273-9D84-7CB97F91001B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,7 +60,8 @@ Global
 		{7EED25CD-7A8D-478F-98DD-67DE6B2C20FD} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
 		{147FDA9E-D16B-4536-987B-F0DB39B72474} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
 		{6B341B88-233A-4BD1-8215-410EF16941A1} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
-		{5D111A4C-C983-4273-9D84-7CB97F91001B} = {4E32458D-6732-46C7-9E3E-63157787AA96}
+		{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
+		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD} = {4E32458D-6732-46C7-9E3E-63157787AA96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE00D4B4-535A-42B5-A18E-76BC5B0A7090}

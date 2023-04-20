@@ -1,4 +1,4 @@
-﻿namespace ModularArchitecture.Identity
+﻿namespace ModularArchitecture.Identity.Abstraction
 {
     public interface ITextValue
     {

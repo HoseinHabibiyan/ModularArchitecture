@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using Microsoft.Extensions.Localization;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json.Internal
 {
     internal class StringLocalizer : IStringLocalizer
     {

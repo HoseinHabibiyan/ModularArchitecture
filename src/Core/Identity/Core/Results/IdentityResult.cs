@@ -1,11 +1,12 @@
-﻿
-namespace  ModularArchitecture.Identity.Core.Result
+﻿using ModularArchitecture.Identity.Abstraction.Results;
+
+namespace ModularArchitecture.Identity.Core.Results
 {
     public class IdentityResult : IIdentityResult
     {
         public IdentityResult()
         {
-            
+
         }
 
         public IdentityResult(string message)

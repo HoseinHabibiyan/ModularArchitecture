@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Security.Claims;
 
-namespace ModularArchitecture.Identity.Controllers
+namespace Security.Controllers
 {
     [ApiController]
     [Route("api/claims")]

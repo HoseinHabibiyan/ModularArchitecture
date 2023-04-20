@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace  ModularArchitecture.Identity.Core
+namespace ModularArchitecture.Identity.Abstraction.Inputs
 {
     public interface ILoginModel
     {

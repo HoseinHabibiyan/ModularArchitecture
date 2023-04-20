@@ -1,4 +1,4 @@
-﻿namespace  ModularArchitecture.Identity.Core
+﻿namespace ModularArchitecture.Identity.EntityFramework
 {
     public class IdentityContextOptions
     {

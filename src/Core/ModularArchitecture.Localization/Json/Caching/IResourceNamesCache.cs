@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ModularArchitecture.Localization
+﻿namespace ModularArchitecture.Localization.Json.Caching
 {
     public interface IResourceNamesCache
     {

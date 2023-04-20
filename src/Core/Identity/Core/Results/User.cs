@@ -1,5 +1,6 @@
-﻿
-namespace  ModularArchitecture.Identity.Core
+﻿using ModularArchitecture.Identity.Abstraction.Results;
+
+namespace ModularArchitecture.Identity.Core.Results
 {
     public class User : IUser
     {

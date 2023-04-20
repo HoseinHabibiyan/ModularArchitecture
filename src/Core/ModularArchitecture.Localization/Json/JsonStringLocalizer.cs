@@ -5,13 +5,15 @@ using System.Globalization;
 using System.Resources;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
+using ModularArchitecture.Localization.Json.Caching;
+using ModularArchitecture.Localization.Json.Internal;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json
 {
     public class JsonStringLocalizer : IStringLocalizer
     {
         private readonly ConcurrentDictionary<string, object> _missingManifestCache = new ConcurrentDictionary<string, object>();
-        private readonly IResourceNamesCache _resourceNamesCache;
+        private readonly Caching.IResourceNamesCache _resourceNamesCache;
         private readonly JsonResourceManager _jsonResourceManager;
         private readonly IResourceStringProvider _resourceStringProvider;
         private readonly ILogger _logger;
@@ -20,7 +22,7 @@ namespace ModularArchitecture.Localization
 
         public JsonStringLocalizer(
             JsonResourceManager jsonResourceManager,
-            IResourceNamesCache resourceNamesCache,
+            Caching.IResourceNamesCache resourceNamesCache,
             ILogger logger)
             : this(jsonResourceManager,
                 new JsonStringProvider(resourceNamesCache, jsonResourceManager),
@@ -33,7 +35,7 @@ namespace ModularArchitecture.Localization
         public JsonStringLocalizer(
             JsonResourceManager jsonResourceManager,
             IResourceStringProvider resourceStringProvider,
-            IResourceNamesCache resourceNamesCache,
+            Caching.IResourceNamesCache resourceNamesCache,
             ILogger logger)
         {
             _jsonResourceManager = jsonResourceManager ?? throw new ArgumentNullException(nameof(jsonResourceManager));
@@ -134,7 +136,7 @@ namespace ModularArchitecture.Localization
             catch (MissingManifestResourceException)
             {
                 _missingManifestCache.TryAdd(cacheKey, null);
-                
+
                 return null;
             }
         }

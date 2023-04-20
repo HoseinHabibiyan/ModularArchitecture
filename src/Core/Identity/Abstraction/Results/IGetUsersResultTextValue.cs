@@ -1,6 +1,4 @@
-﻿using ModularArchitecture.Identity.Core;
-
-namespace ModularArchitecture.Identity
+﻿namespace ModularArchitecture.Identity.Abstraction.Results
 {
     public interface IGetUsersResultTextValue : IIdentityResult
     {

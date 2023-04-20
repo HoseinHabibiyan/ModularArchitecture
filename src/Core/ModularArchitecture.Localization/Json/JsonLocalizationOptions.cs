@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Localization;
 
-namespace ModularArchitecture.Localization
+namespace ModularArchitecture.Localization.Json
 {
     public class JsonLocalizationOptions : LocalizationOptions
     {

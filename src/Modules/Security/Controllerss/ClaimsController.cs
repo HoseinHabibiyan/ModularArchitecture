@@ -10,7 +10,7 @@ namespace Security.Controllers
     public class ClaimsController : ControllerBase
     {
         [Authorize]
-        [Route("")]
+        [HttpGet]
         public IActionResult GetClaims()
         {
             var identity = User.Identity as ClaimsIdentity;

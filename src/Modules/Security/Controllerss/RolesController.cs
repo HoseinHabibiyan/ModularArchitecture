@@ -25,7 +25,7 @@ namespace Security.Controllers
 
         protected ModelFactory ModelFactory => _modelFactory ??= new ModelFactory(_appUserManager);
 
-        [Route("role/{id:guid}", Name = "GetRoleById")]
+        [HttpGet("role/{id:guid}", Name = "GetRoleById")]
         public async Task<IActionResult> GetRole(string id)
         {
             var role = await _appRoleManager.FindByIdAsync(id);
@@ -38,7 +38,7 @@ namespace Security.Controllers
             return NotFound();
         }
 
-        [Route("role/{name}", Name = "GetRoleByName")]
+        [HttpGet("role/{name}", Name = "GetRoleByName")]
         public async Task<IActionResult> GetRoleByName(string name)
         {
             var role = await _appRoleManager.FindByNameAsync(name);
@@ -51,7 +51,7 @@ namespace Security.Controllers
             return NotFound();
         }
 
-        [Route("")]
+        [HttpGet]
         public IActionResult GetAllRoles()
         {
             var roles = _appRoleManager.Roles.ToList();
@@ -59,7 +59,7 @@ namespace Security.Controllers
             return Ok(roles);
         }
 
-        [Route("create")]
+        [HttpGet("create")]
         public async Task<IActionResult> Create(ICreateRoleModel model)
         {
             if (!ModelState.IsValid)
@@ -83,8 +83,7 @@ namespace Security.Controllers
 
         }
 
-        //[Authorize]
-        [Route("update")]
+        [HttpGet("update")]
         public async Task<IActionResult> Update(IUpdateRoleModel model)
         {
             if (!ModelState.IsValid)
@@ -118,7 +117,7 @@ namespace Security.Controllers
             }
         }
 
-        [Route("{id:guid}")]
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> DeleteRole(string id)
         {
 
@@ -140,7 +139,7 @@ namespace Security.Controllers
 
         }
 
-        [Route("ManageUsersInRole")]
+        [HttpGet("ManageUsersInRole")]
         public async Task<IActionResult> ManageUsersInRole(IUsersInRoleModel model)
         {
             var role = await _appRoleManager.FindByIdAsync(model.Id);

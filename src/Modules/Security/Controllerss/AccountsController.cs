@@ -32,6 +32,8 @@ namespace Security.Controllers
             _memoryCacheService = memoryCacheService;
         }
 
+        [AllowAnonymous]
+        [HttpGet("Login")]
         public async Task<IActionResult> Login(LoginModel model)
         {
             var loginResult = await _authenticationManager.SignInJwtAsync(model);
@@ -129,6 +131,7 @@ namespace Security.Controllers
             return BadRequest(result.Message);
         }
 
+        [AllowAnonymous]
         [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterModel model)
         {
@@ -142,7 +145,7 @@ namespace Security.Controllers
             return Ok(result);
         }
 
-
+        [AllowAnonymous]
         [HttpPost("ChangePassword")]
         public async Task<IActionResult> ChangePassword(ChangePasswordModel model)
         {

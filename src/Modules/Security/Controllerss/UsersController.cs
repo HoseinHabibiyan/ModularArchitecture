@@ -34,29 +34,28 @@ namespace Security.Controllers
             return await _appUserManager.FindByIdAsync(userId);
         }
 
-        [Route("")]
+        [HttpGet]
         public IActionResult GetUsers()
         {
             var z = _appUserManager.Users.ToList();
             return Ok(z);
         }
 
-        [Route("users")]
-        [HttpPost]
+        [HttpGet("GetByIds")]
         public IActionResult GetUsers(List<string> userIds)
         {
             var z = _appUserManager.Users.Where(x => userIds.Contains(x.Id)).ToList();
             return Ok(z);
         }
 
-        [Route("usersInRole/{roleName}")]
+        [HttpGet("usersInRole/{roleName}")]
         public async Task<IActionResult> GetUsersInRole(string roleName)
         {
             var users = await _appUserManager.GetUsersInRoleAsync(roleName);
             return Ok(users);
         }
 
-        [Route("user/{id:guid}", Name = "GetUserById")]
+        [HttpGet("user/{id:guid}", Name = "GetUserById")]
         public async Task<IActionResult> GetUser(string id)
         {
             var user = await _appUserManager.FindByIdAsync(id);
@@ -69,8 +68,7 @@ namespace Security.Controllers
             return NotFound();
         }
 
-        //[Authorize]
-        [Route("user/{username}/")]
+        [HttpGet("user/{username}/")]
         public async Task<IActionResult> GetUserByName(string username)
         {
             var user = await _appUserManager.FindByNameAsync(username);
@@ -84,7 +82,7 @@ namespace Security.Controllers
 
         }
 
-        [Route("user/phone/{phone}/")]
+        [HttpGet("user/phone/{phone}/")]
         public IActionResult GetUserByPhone(string phone)
         {
             var user = _appUserManager.Users.FirstOrDefault(x => x.PhoneNumber == phone);
@@ -98,7 +96,7 @@ namespace Security.Controllers
 
         }
 
-        [Route("users/{name}/")]
+        [HttpGet("users/{name}/")]
         public IActionResult GetUsersByName(string name)
         {
             name = name?.ToLower();
@@ -112,8 +110,7 @@ namespace Security.Controllers
             return Ok(list);
         }
 
-        [AllowAnonymous]
-        [Route("create")]
+        [HttpGet("create")]
         public async Task<IActionResult> CreateUser(RegisterModel createUserModel)
         {
             if (!ModelState.IsValid)
@@ -147,7 +144,7 @@ namespace Security.Controllers
         }
 
         [AllowAnonymous]
-        [Route("GenerateEmailConfirmationToken")]
+        [HttpGet("GenerateEmailConfirmationToken")]
         public async Task<string> GenerateEmailConfirmationToken(string userId)
         {
             var user = await _appUserManager.FindByIdAsync(userId);
@@ -155,8 +152,7 @@ namespace Security.Controllers
             return code;
         }
 
-        [Authorize]
-        [Route("update")]
+        [HttpPut("update")]
         public async Task<IActionResult> UpdateUser(IUpdateUserModel updateUserModel)
         {
             if (!ModelState.IsValid)
@@ -180,7 +176,7 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("UpdateUserByEmail")]
+        [HttpPut("UpdateUserByEmail")]
         public async Task<IActionResult> UpdateUserByEmail(IUpdateUserModel updateUserModel)
         {
             if (!ModelState.IsValid)
@@ -203,8 +199,7 @@ namespace Security.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet]
-        [Route("ConfirmEmail", Name = "ConfirmEmailRoute")]
+        [HttpGet("ConfirmEmail", Name = "ConfirmEmailRoute")]
         public async Task<IActionResult> ConfirmEmail(string userId = "", string code = "")
         {
             if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(code))
@@ -220,8 +215,7 @@ namespace Security.Controllers
             return result.Succeeded ? Ok() : GetErrorResult(result);
         }
 
-        [Authorize]
-        [Route("ChangePassword")]
+        [HttpGet("ChangePassword")]
         public async Task<IActionResult> ChangePassword(IChangePasswordModel model)
         {
             if (!ModelState.IsValid)
@@ -236,7 +230,7 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Admin,SuperAdmin,Operators")]
-        [Route("ResetPasswordByAdmin")]
+        [HttpGet("ResetPasswordByAdmin")]
         public async Task<IActionResult> ResetPasswordByAdmin(IResetPasswordByAdminModel model)
         {
             if (!ModelState.IsValid)
@@ -257,7 +251,7 @@ namespace Security.Controllers
             return Ok();
         }
 
-        [Route("GeneratePasswordResetToken")]
+        [HttpGet("GeneratePasswordResetToken")]
         public async Task<IActionResult> GeneratePasswordResetToken(IForgetPasswordModel model)
         {
             if (!ModelState.IsValid)
@@ -278,7 +272,7 @@ namespace Security.Controllers
             return Ok(code);
         }
 
-        [Route("ResetPassword")]
+        [HttpGet("ResetPassword")]
         public async Task<IActionResult> ResetPassword(IResetPasswordModel model)
         {
             if (!ModelState.IsValid)
@@ -300,7 +294,7 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("user/{id:guid}")]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteUser(string id)
         {
             var appUser = await _appUserManager.FindByIdAsync(id);
@@ -314,7 +308,7 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("LockUser/{id:guid}")]
+        [HttpGet("LockUser/{id:guid}")]
         public async Task<IActionResult> LockUser(string id)
         {
             //Only SuperAdmin or Admin can delete users (Later when implement roles)
@@ -330,7 +324,7 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("UnLockUser/{id:guid}")]
+        [HttpGet("UnLockUser/{id:guid}")]
         public async Task<IActionResult> UnLockUser(string id)
         {
             //Only SuperAdmin or Admin can delete users (Later when implement roles)
@@ -345,8 +339,7 @@ namespace Security.Controllers
             return !result.Succeeded ? GetErrorResult(result) : Ok();
         }
 
-        [Route("user/{id:guid}/roles")]
-        [HttpPut]
+        [HttpPut("user/{id:guid}/roles")]
         public async Task<IActionResult> AssignRolesToUser([FromRoute] string id, [FromBody] string[] rolesToAssign)
         {
             var isAdmin = User.IsInRole("Admin") || User.IsInRole("SuperAdmin");
@@ -395,8 +388,7 @@ namespace Security.Controllers
         }
 
         [Authorize]
-        [Route("user/{id:guid}/removeroles")]
-        [HttpPut]
+        [HttpPut("user/{id:guid}/removeroles")]
         public async Task<IActionResult> RemoveRolesFromUser([FromRoute] string id, [FromBody] string[] rolesToRemove)
         {
             if (!ModelState.IsValid)
@@ -425,8 +417,7 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("user/{id:guid}/assignclaims")]
-        [HttpPut]
+        [HttpPut("user/{id:guid}/assignclaims")]
         public async Task<IActionResult> AssignClaimsToUser([FromRoute] string id, [FromBody] List<ClaimBindingModel> claimsToAssign)
         {
             if (!ModelState.IsValid)
@@ -447,8 +438,7 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("user/{id:guid}/removeclaims")]
-        [HttpPut]
+        [HttpPut("user/{id:guid}/removeclaims")]
         public async Task<IActionResult> RemoveClaimsFromUser([FromRoute] string id, [FromBody] List<ClaimBindingModel> claimsToRemove)
         {
             if (!ModelState.IsValid)
@@ -508,9 +498,8 @@ namespace Security.Controllers
         //    return BadRequest("code is invalid");
         //}
 
-        [HttpGet]
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("EnableUser/{id:guid}")]
+        [HttpGet("EnableUser/{id:guid}")]
         public async Task<IActionResult> EnableUser(string id)
         {
             var appUser = await _appUserManager.FindByIdAsync(id);
@@ -524,9 +513,8 @@ namespace Security.Controllers
             return !result.Succeeded ? GetErrorResult(result) : Ok();
         }
 
-        [HttpGet]
         [Authorize(Roles = "Admin,SuperAdmin")]
-        [Route("DisableUser/{id:guid}")]
+        [HttpGet("DisableUser/{id:guid}")]
         public async Task<IActionResult> DisableUser(string id)
         {
             var appUser = await _appUserManager.FindByIdAsync(id);

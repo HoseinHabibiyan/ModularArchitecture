@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularArchitecture.Identit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{4E32458D-6732-46C7-9E3E-63157787AA96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularArchitecture.MemoryCache", "src\Core\ModularArchitecture.MemoryCache\ModularArchitecture.MemoryCache.csproj", "{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularArchitecture.MemoryCache", "src\Core\ModularArchitecture.MemoryCache\ModularArchitecture.MemoryCache.csproj", "{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "src\Modules\Security\Security.csproj", "{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "src\Modules\Security\Security.csproj", "{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Modules\Shared\Shared.csproj", "{39376B20-C580-42E9-A71D-A536331724CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39376B20-C580-42E9-A71D-A536331724CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39376B20-C580-42E9-A71D-A536331724CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39376B20-C580-42E9-A71D-A536331724CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39376B20-C580-42E9-A71D-A536331724CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{6B341B88-233A-4BD1-8215-410EF16941A1} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
 		{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
 		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD} = {4E32458D-6732-46C7-9E3E-63157787AA96}
+		{39376B20-C580-42E9-A71D-A536331724CF} = {4E32458D-6732-46C7-9E3E-63157787AA96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE00D4B4-535A-42B5-A18E-76BC5B0A7090}

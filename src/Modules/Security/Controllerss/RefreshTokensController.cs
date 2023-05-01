@@ -17,15 +17,14 @@ namespace Security.Controllers
         }
 
         [Authorize(Roles = "Administrators")]
-        [Route("")]
+        [HttpGet]
         public IActionResult Get()
         {
             return Ok(_refreshTokenManager.GetAllRefreshTokens());
         }
 
         [Authorize(Roles = "Administrators")]
-        //[AllowAnonymous]
-        [Route("")]
+        [HttpDelete]
         public async Task<IActionResult> Delete(string tokenId)
         {
             var result = await _refreshTokenManager.RemoveRefreshTokenAsync(tokenId);

@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularArchitecture.MemoryC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "src\Modules\Security\Security.csproj", "{C05D7049-BA48-4BE3-B319-FA47BCFF80BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Modules\Shared\Shared.csproj", "{39376B20-C580-42E9-A71D-A536331724CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "src\Modules\Shared\Shared.csproj", "{39376B20-C580-42E9-A71D-A536331724CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularArchitecture.Persistence", "src\Core\ModularArchitecture.Persistence\ModularArchitecture.Persistence.csproj", "{4395864D-1B0E-43A5-83F9-7C95A80C3F20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{39376B20-C580-42E9-A71D-A536331724CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39376B20-C580-42E9-A71D-A536331724CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39376B20-C580-42E9-A71D-A536331724CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4395864D-1B0E-43A5-83F9-7C95A80C3F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4395864D-1B0E-43A5-83F9-7C95A80C3F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4395864D-1B0E-43A5-83F9-7C95A80C3F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4395864D-1B0E-43A5-83F9-7C95A80C3F20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{10C68994-7EBD-40EC-BFF5-A28B6AD16FC2} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
 		{C05D7049-BA48-4BE3-B319-FA47BCFF80BD} = {4E32458D-6732-46C7-9E3E-63157787AA96}
 		{39376B20-C580-42E9-A71D-A536331724CF} = {4E32458D-6732-46C7-9E3E-63157787AA96}
+		{4395864D-1B0E-43A5-83F9-7C95A80C3F20} = {6D62E5FE-C5E1-42B2-8C68-B76B7EDC4F4A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE00D4B4-535A-42B5-A18E-76BC5B0A7090}

@@ -2,12 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ModularArchitecture.Identity.EntityFramework;
+using Shared.Base;
 
 namespace Security.Controllers
 {
-    [ApiController]
-    [Route("api/refreshtoken")]
-    public class RefreshTokensController : ControllerBase
+    public class RefreshTokensController : BaseController
     {
         private readonly RefreshTokenStore _refreshTokenManager;
 

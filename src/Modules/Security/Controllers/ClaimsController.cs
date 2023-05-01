@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Base;
 using System.Linq;
 using System.Security.Claims;
 
 namespace Security.Controllers
 {
-    [ApiController]
-    [Route("api/claims")]
-    public class ClaimsController : ControllerBase
+    public class ClaimsController : BaseController
     {
         [Authorize]
         [HttpGet]

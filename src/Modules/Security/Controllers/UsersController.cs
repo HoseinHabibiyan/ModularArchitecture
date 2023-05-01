@@ -6,13 +6,12 @@ using ModularArchitecture.Identity.Core;
 using ModularArchitecture.Identity.Core.Extensions;
 using ModularArchitecture.Identity.Core.Inputs;
 using ModularArchitecture.Identity.Core.Models;
+using Shared.Base;
 using System.Security.Claims;
 
 namespace Security.Controllers
 {
-    [ApiController]
-    [Route("api/users")]
-    public class UsersController : ControllerBase
+    public class UsersController : BaseController
     {
         private readonly UserManager<ApplicationUser> _appUserManager;
         private ModelFactory _modelFactory;

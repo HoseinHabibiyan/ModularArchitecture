@@ -9,12 +9,11 @@ using ModularArchitecture.Identity.Core.Inputs;
 using ModularArchitecture.Identity.Core.Results;
 using ModularArchitecture.Identity.Core.Extensions;
 using ModularArchitecture.Identity.Core.Models;
+using Shared.Base;
 
 namespace Security.Controllers
 {
-    [ApiController]
-    [Route("api/accounts")]
-    public class AccountsController : ControllerBase
+    public class AccountsController : BaseController
     {
         private readonly AuthenticationManager _authenticationManager;
         private readonly UserManager _userManager;

@@ -4,12 +4,11 @@ using ModularArchitecture.Identity.Abstraction.Inputs;
 using ModularArchitecture.Identity.Core;
 using ModularArchitecture.Identity.Core.Models;
 using ModularArchitecture.Identity.EntityFramework;
+using Shared.Base;
 
 namespace Security.Controllers
 {
-    [ApiController]
-    [Route("api/roles")]
-    public class RolesController : ControllerBase
+    public class RolesController : BaseController
     {
         private readonly UserManager<ApplicationUser> _appUserManager;
         private ModelFactory _modelFactory;

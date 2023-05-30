@@ -5,7 +5,7 @@ namespace Shared.Base
 {
     [Produces("application/json", new string[] { })]
     [ApiController]
-    [Route("api/{culture}/[controller]")]
+    [Route("api/[controller]")]
     [Authorize(AuthenticationSchemes = "Bearer")]
     public class BaseController : ControllerBase
     {

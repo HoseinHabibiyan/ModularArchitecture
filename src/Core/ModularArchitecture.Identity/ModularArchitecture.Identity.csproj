@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -16,8 +16,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\ModularArchitecture.Infrastructure\ModularArchitecture.Infrastructure.csproj" />
-	  <ProjectReference Include="..\ModularArchitecture.MemoryCache\ModularArchitecture.MemoryCache.csproj" />
+		<ProjectReference Include="..\ModularArchitecture.Infrastructure\ModularArchitecture.Infrastructure.csproj" />
+		<ProjectReference Include="..\ModularArchitecture.MemoryCache\ModularArchitecture.MemoryCache.csproj" />
 	</ItemGroup>
+
 
 </Project>
